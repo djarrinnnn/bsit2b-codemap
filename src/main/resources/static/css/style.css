@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    background: #111;
+    color: #fff;
+    overflow-x: hidden;
+}
+.background-anim {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 0;
+    background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+    overflow: hidden;
+}
+.animated-glow {
+    font-size: 3em;
+    color: #00ffe7;
+    text-shadow: 0 0 20px #00ffe7, 0 0 40px #00ffe7;
+    animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+    from { text-shadow: 0 0 20px #00ffe7; }
+    to { text-shadow: 0 0 40px #00ffe7, 0 0 80px #0ff; }
+}
+header {
+    text-align: center;
+    margin-top: 40px;
+    z-index: 1;
+    position: relative;
+}
+.subtitle {
+    font-size: 1.2em;
+    color: #b2b2ff;
+    letter-spacing: 0.1em;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 60px 0;
+    z-index: 1;
+    position: relative;
+}
+.card {
+    background: rgba(34, 34, 51, 0.9);
+    border: 2px solid #00ffe7;
+    border-radius: 20px;
+    box-shadow: 0 0 32px #00ffe744;
+    padding: 2em 2em;
+    width: 250px;
+    transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-12px) scale(1.05) rotate(-2deg);
+    box-shadow: 0 0 50px #00ffe799;
+    border-color: #fff;
+}
+footer {
+    text-align: center;
+    color: #99b3ff;
+    padding: 2em 0;
+    font-size: 0.9em;
+    letter-spacing: 0.08em;
+    z-index: 1;
+    position: relative;
+}
+@media (max-width: 900px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
