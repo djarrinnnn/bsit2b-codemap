@@ -1,12 +1,4 @@
-# BSIT-2B Codemap-Inspired IT Website
-
-A highly-stylized, animated IT website for BSIT-2B using Java (Spring Boot) and a modern, animated frontend.
-
-## Features
-
-- Animated "code rain" background inspired by Codemap/Matrix
-- Responsive, glowing cards and headers
-- Spring Boot and Thymeleaf backend
+# BSIT-2B Codemap IT Website
 
 ## Setup
 
